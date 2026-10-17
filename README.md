@@ -2,7 +2,9 @@
 
 **A live, searchable map of any public GitHub profile.** RepoRadar turns a repository list into a visual project index with language mix, star constellation, repository search, filters, and sortable activity.
 
-![RepoRadar dark dashboard preview](docs/preview.svg)
+![Illustrative RepoRadar interface artwork](docs/preview.svg)
+
+The artwork is illustrative; profile statistics on the live app are fetched from GitHub when you scan a username.
 
 ## Why it exists
 
