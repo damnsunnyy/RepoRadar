@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#101411" />
+  <meta name="description" content="Explore the shape of any public GitHub profile. RepoRadar turns repositories into a live, searchable project map." />
+  <title>RepoRadar — a live map of your GitHub work</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <header class="topbar"><a class="wordmark" href="#top" aria-label="RepoRadar home"><span class="mark">◉</span> REPO<span>RADAR</span></a><span class="live-label"><i></i> LIVE PUBLIC DATA</span><a class="github-link" href="https://github.com/damnsunnyy" target="_blank" rel="noreferrer">VIEW SOURCE ↗</a></header>
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy"><p class="kicker"><span>01 / DEVELOPER GRAPH</span><span>PUBLIC REPOSITORIES ONLY</span></p><h1>See your<br /><em>work</em><br />in orbit.</h1><p class="lede">A live, searchable map of the projects, languages, and momentum behind any public GitHub profile.</p>
+      <form id="profile-form" class="profile-form"><label for="username">GITHUB USERNAME</label><div class="input-row"><span class="at">@</span><input id="username" name="username" value="damnsunnyy" autocomplete="off" spellcheck="false" placeholder="octocat" /><button type="submit">SCAN PROFILE <span>↗</span></button></div></form>
+      <div class="hint" id="status" aria-live="polite">Enter a username to map their public work.</div></div>
+      <div class="hero-graphic" aria-hidden="true"><div class="orbit orbit-a"></div><div class="orbit orbit-b"></div><div class="orbit orbit-c"></div><div class="core"><b>GH</b><span>PUBLIC<br />GRAPH</span></div><i class="satellite sat-a">JS</i><i class="satellite sat-b">Py</i><i class="satellite sat-c">◈</i><i class="satellite sat-d">◆</i><div class="coord coord-a">LAT 37.77<br />LNG 122.41</div><div class="coord coord-b">CODE<br />IN MOTION</div></div>
+      <span class="hero-index">RR / 001</span>
+    </section>
+    <section class="dashboard" id="dashboard" hidden>
+      <div class="dash-head"><div><p class="kicker">PROFILE SIGNAL</p><h2 id="profile-title">Repository map</h2><a id="profile-link" href="#" target="_blank" rel="noreferrer">@username ↗</a></div><div class="dash-actions"><span id="updated" class="updated"></span><button id="share-button" class="quiet-button">COPY LINK ↗</button></div></div>
+      <div class="stat-grid"><article class="stat"><span>PUBLIC REPOSITORIES</span><b id="repo-stat">—</b><i>work in the open</i></article><article class="stat"><span>STARS EARNED</span><b id="star-stat">—</b><i>community signal</i></article><article class="stat"><span>LANGUAGES</span><b id="language-stat">—</b><i>across the portfolio</i></article><article class="stat"><span>FORKED WORK</span><b id="fork-stat">—</b><i>shared and extended</i></article></div>
+      <div class="analysis-grid"><article class="panel language-panel"><div class="panel-title"><div><p class="kicker">01 / LANGUAGE MIX</p><h3>What you build with</h3></div><span id="language-total" class="panel-note"></span></div><div id="language-chart" class="language-chart"></div><div id="language-legend" class="language-legend"></div></article><article class="panel constellation-panel"><div class="panel-title"><div><p class="kicker">02 / PROJECT CONSTELLATION</p><h3>Star map</h3></div><span class="panel-note">SIZE = STARS</span></div><div id="constellation" class="constellation"></div></article></div>
+      <section class="projects panel"><div class="panel-title project-title"><div><p class="kicker">03 / REPOSITORY INDEX</p><h3>Every public project</h3></div><span id="project-count" class="panel-note"></span></div><div class="controls"><label class="search"><span>⌕</span><input id="repo-search" placeholder="Find a project or language" autocomplete="off" /></label><select id="sort-select" aria-label="Sort projects"><option value="stars">Most stars</option><option value="updated">Recently updated</option><option value="created">Recently created</option><option value="name">Name A–Z</option></select><div id="language-filters" class="language-filters" aria-label="Filter by language"></div></div><div id="repo-grid" class="repo-grid"></div><p class="footnote">Data comes from GitHub’s public REST API. Private repositories and activity are never requested.</p></section>
+      <footer class="footer"><span>REPORADAR · OPEN SOURCE TOOLING</span><span>BUILT TO MAKE CODE VISIBLE <b>✳</b></span></footer>
+    </section>
+  </main>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
