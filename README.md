@@ -1,5 +1,7 @@
 # RepoRadar
 
+**Live demo:** [https://damnsunnyy.github.io/RepoRadar/](https://damnsunnyy.github.io/RepoRadar/)
+
 **A live, searchable map of any public GitHub profile.** RepoRadar turns a repository list into a visual project index with language mix, star constellation, repository search, filters, and sortable activity.
 
 ![Illustrative RepoRadar interface artwork](docs/preview.svg)
